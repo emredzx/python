@@ -1,1 +1,1 @@
-
+açıklamalar
