@@ -1,4 +1,5 @@
-for e in range(0, 3):
+e = int(input("Aralık giriniz. : "))
+for x in range(0, e):
     print("Kullanıcının Girmiş Olduğu 2 Sayı Üzerinde 4 İşlem Yapabilen Uygulama")
     sayi1 = int(input("1. Sayıyı Giriniz : "))
     sayi2 = int(input("2. Sayıyı Giriniz : "))
@@ -19,9 +20,11 @@ for e in range(0, 3):
          print("Kalan : ", carp)
 
     elif (islem == "/"):
-
-         bol = sayi1 // sayi2
-         print("Bölüm : ", bol)
+        if (sayi2 == 0):
+            print ("Bölmede 2.sayı 0 girilemez..")
+        else:
+            bol = sayi1 // sayi2
+            print("Bölüm : ", bol)
 
     elif (islem == "exit"):
         break
