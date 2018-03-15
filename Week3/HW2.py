@@ -1,4 +1,3 @@
-a = []
 s = input("Bir kelime giriniz : ")
 s = s.lower()
 tmp=[None]*len(s)
