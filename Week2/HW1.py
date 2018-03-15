@@ -12,4 +12,4 @@ print(a)
 for i in a:
     toplam = toplam + i
 sayi = toplam - ilktoplam
-print("Duplicate sayý : ",sayi)
+print("Duplicate sayÄ±: ",sayi)
