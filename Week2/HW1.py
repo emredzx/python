@@ -1,12 +1,15 @@
 import random
-arr = [None] * 100
+sayi = 0
+ilktoplam = 0
+toplam = 0
+a = [None] * 100
 for i in range(1, 100):
-    arr[i] = i
-arr[0] = random.randint(1, 99)
-random.shuffle(arr)
-print(arr)
-tp = 0
-for i in arr:
-    tp = tp + i
-rs = tp - 4950
-print("Tekrar Eden SayÄ± :", rs)
+    a[i] = i
+    ilktoplam = ilktoplam + i
+a[0] = random.randint(1,99)
+random.shuffle(a)
+print(a)
+for i in a:
+    toplam = toplam + i
+sayi = toplam - ilktoplam
+print("Duplicate sayý : ",sayi)

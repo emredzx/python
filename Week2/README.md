@@ -19,5 +19,6 @@ harf olarak diziye atar. Her harfe bir index numarası atar ve tekrar eden numar
 birleştirilir ve sonucu yazdırır.
 
 # HW4
-Kullanıcıdan input alır. İnputun string uzunluğunu alır değişkene atar. While ve if-else kullanarak polindrom olup olmadığını
-kontrol eder. Sonucu yazar.
+Bir input alınır. Büyük küçük harf farkı için girilen input küçük harflere dönüştürülür. İki tane boş array oluşturulur.
+inputun harfleri arraylerin içine yazdırılır. Arraylerin birinin elemanları ters çevrilir ve bir girilen input bir de ters hali
+olmak üzere iki array olur. Düz haliyle ters çevrilmiş hali karşılaştırılarak palindrom olup olmadığı yazdırılır.
