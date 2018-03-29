@@ -14,9 +14,6 @@ class Stack:
     def peek(self):
         return self.items[0]
 
-    def size(self):
-        return len(self.items)
-
 
 class Calculator:
     def infix2Postfix(self, infix):
