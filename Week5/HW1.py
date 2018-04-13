@@ -20,7 +20,7 @@ class LinkedList:
     def __init__(self):
         self._rootNode = None
 
-    def add(self, data):
+    def insert(self, data):
         tmp = Node(data)
         if self._rootNode == None:
             self._rootNode = tmp
@@ -53,33 +53,19 @@ class LinkedList:
             v1 = v2
             v2 = v2.nextNode
 
-    def findMid(self):
+    def find_mid(self):
         if self._rootNode == None:
             print("LinkedList boştur.")
             return
-        if self._rootNode.nextNode == None:
-            print("LinkedList tek elemanlıdır.")
-            return
-        if self._rootNode.nextNode != None and self._rootNode.nextNode.nextNode == None:
-            print("LinkedList 2 elemanlıdır orta elemanı yoktur.")
-            return
         slowptr = self._rootNode
-        fastptr = slowptr.nextNode
+        fastptr = self._rootNode
         while fastptr != None:
-            try:
-                slowptr = slowptr
-                fastptr = fastptr.nextNode
-                slowptr = slowptr.nextNode
-                fastptr = fastptr.nextNode
-            except AttributeError:
-                print("Linkedlist uzunluğu çift sayıdır. Ortada 2 eleman vardır.")
-                double = self._rootNode
-                double2 = double.nextNode
-                while double2 != slowptr:
-                    double = double2
-                    double2 = double2.nextNode
-                print("Ortadaki Eleman : ", double.data)
-        print("Ortadaki Eleman : ", slowptr.data)
+            if fastptr.nextNode == None:
+                print("Linkedlist Eleman Sayısı : {0}".format(slowptr.data))
+                return
+            slowptr = slowptr.nextNode
+            fastptr = fastptr.nextNode.nextNode
+        print("Linkedlist Ortadaki Eleman : {0}".format(slowptr.data))
 
 
 if __name__ == "__main__":
@@ -87,24 +73,23 @@ if __name__ == "__main__":
 
     print("--" * 10)
     a = LinkedList()
-    a.add(5)
-    a.add(10)
-    a.add(15)
-    a.add(20)
-    a.add(25)
-    a.add(30)
-    a.add(35)
-    a.add(40)
+    a.insert(5)
+    a.insert(10)
+    a.insert(15)
+    a.insert(20)
+    a.insert(25)
+    a.insert(30)
+    a.insert(35)
     a.dump()
     print("--" * 10)
-    a.findMid()
+    a.find_mid()
     print("--" * 10)
     b = LinkedList()
     x = random.randint(1, 100)
     print("Oluşturulan random linkedlist", x, "Elemanlıdır.")
     for i in range(x):
-        b.add(random.randint(1, 100))
+        b.insert(random.randint(1, 100))
     b.dump()
     print("--" * 10)
-    b.findMid()
+    b.find_mid()
     print("--" * 10)
