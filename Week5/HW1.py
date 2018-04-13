@@ -1,3 +1,6 @@
+import random
+
+
 class Node:
     def __init__(self, data):
         self._data = data
@@ -69,8 +72,6 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    import random
-
     print("--" * 10)
     a = LinkedList()
     a.insert(5)
