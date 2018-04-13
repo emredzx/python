@@ -64,7 +64,7 @@ class LinkedList:
         fastptr = self._rootNode
         while fastptr != None:
             if fastptr.nextNode == None:
-                print("Linkedlist Eleman Sayısı : {0}".format(slowptr.data))
+                print("Linkedlist Ortadaki Eleman : {0}".format(slowptr.data))
                 return
             slowptr = slowptr.nextNode
             fastptr = fastptr.nextNode.nextNode
